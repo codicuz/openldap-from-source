@@ -44,7 +44,7 @@ while :; do
 	  --publish 389:389  \
 	  --name $DCNAME \
 	  --volume $PWD/volumes/ldap:/opt/ldap \
-	  $DINAME bash
+	  $DINAME
 	 ;;
 	-import)
 	  docker exec -it $DCNAME /opt/ldap/sbin/slapadd -n 0 -F /opt/ldap/etc/openldap -l /opt/ldifs/slapd.ldif
